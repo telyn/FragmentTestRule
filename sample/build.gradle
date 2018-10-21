@@ -1,17 +1,17 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion "26.0.3"
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
 
     defaultConfig {
         applicationId "com.android21buttons.fragmenttestrule.sample"
         minSdkVersion 14
-        targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
+        targetSdkVersion 28
+        versionCode 2
+        versionName "2.0"
 
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -24,12 +24,13 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation "com.android.support:appcompat-v7:$support_version"
+    implementation 'androidx.appcompat:appcompat:1.0.0'
 
     androidTestImplementation project(':fragmenttestrule')
     debugImplementation project(':fragmenttestrule-extras')
-    androidTestImplementation('com.android.support.test.espresso:espresso-core:3.0.1', {
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0-beta02', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    androidTestImplementation 'androidx.test:rules:1.1.0-beta02'
     testImplementation 'junit:junit:4.12'
 }
