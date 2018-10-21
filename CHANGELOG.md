@@ -1,6 +1,11 @@
 Change Log
 ==========
 
+Version 2.0
+-----------
+
+Add support for AndroidX (and remove support for Android Support)
+
 Version 1.1.0 *(2017-11-21)*
 ----------------------------
 
